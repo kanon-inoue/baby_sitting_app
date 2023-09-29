@@ -12,8 +12,8 @@ const Welcome = () => {
     <div class="app_question" id="app_question">
       <p class="owner_question" id="owner_question">What are you looking after with this application?</p>
       <div class="button_section">
-        <button class="baby_button"><img class="baby_img"src={baby}/>Human <Link to="/register_form"></Link></button>
-        <button class="dog_button"><img class="dog_img"src={dog}/>Dog <Link to="/register_form"></Link></button>
+        <Link  to="/register_form"><button class="baby_button"><img class="baby_img"src={baby}/>Human</button></Link>
+        <Link  to="/register_form"><button class="dog_button"><img class="dog_img"src={dog}/>Dog</button></Link>
       </div>
     </div>
   </div>
