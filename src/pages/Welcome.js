@@ -7,11 +7,11 @@ import {Link} from "react-router-dom";
 
 const Welcome = () => {
   return (
-    <div className="App" id="App">
-      <header className="App-header" id="App-header">
-        <h1 class= "welcom" id="welcom">Welcome <FaHeart style={{color: 'pink'}}/></h1> 
+    <div className="Welcome" id="Welcome">
+      <header className="Welcome-header" id="Welcome-header">
+        <h1 class= "welcome" id="welcome">Welcome <FaHeart style={{color: 'pink'}}/></h1> 
       </header>
-      <div class="app_question" id="app_question">
+      <div class="welcome_question" id="welcome_question">
         <p class="owner_question" id="owner_question">What are you looking after with this application?</p>
         <div class="button_section">
           <Link to="/register_form"><button class="baby_button"><img class="baby_img"src={baby}/>Human</button></Link>
