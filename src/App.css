@@ -9,12 +9,34 @@
     transform: translate(-50%, 0%);
     position: absolute;
     animation: linear;
-    animation-name: run;
+    animation-name: welcom_run;
     animation-duration: 2s;
   }
-  @keyframes run {
+  @keyframes welcom_run {
     from { opacity: 0; left: 70% }
     to   { opacity: 1; left: 50% }
+  }
+
+  #app_question {
+    animation-name: button_run;
+    animation: button_run 0.7s forwards;
+    animation-delay: 2s;
+    transform: scale(0);
+
+  }
+  @keyframes button_run {
+    0%{
+      transform: scale(0);
+    }
+    90%{
+      transform: scale(1.2);
+    }
+    95%{
+      transform: scale(0.95);
+    }
+    100%{
+      transform: scale(1);
+    }
   }
 }
 
