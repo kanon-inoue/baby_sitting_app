@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Welcome from "./pages/Welcome";
-import Register_form from "./pages/Register_form";
+import RegisterForm from "./pages/RegisterForm";
 import NoPage from "./pages/NoPage";
 
 export default function App() {
@@ -9,8 +9,8 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/">
-          <Route path="welcome" element={<Welcome />} />
-          <Route path="register_form" element={<Register_form />} />
+          <Route index element={<Welcome />} />
+          <Route path="RegisterForm" element={<RegisterForm />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
@@ -20,3 +20,9 @@ export default function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
+
+// RegisterForm == snake case
+// RegisterForm == screaming snake case
+// registerForm == camel case
+// RegisterForm == pascal case
