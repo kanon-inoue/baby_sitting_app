@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Welcome />} />
-          <Route path="RegisterForm" element={<RegisterForm />} />
+          <Route path="RegisterForm/:animal_type" element={<RegisterForm />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
