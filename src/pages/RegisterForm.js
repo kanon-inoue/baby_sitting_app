@@ -1,64 +1,62 @@
 import "./register_form.css";
-import 'survey-core/defaultV2.min.css';
-import { useParams } from "react-router-dom";
-import { Model } from 'survey-core';
-import { Survey } from 'survey-react-ui';
+import { useState } from 'react';
 
-const userPetInfo = {
-  elements: [{
-    name: "UserName",
-    title: "What is your name? This will be your user id.",
-    type: "text"
-  }, {
-    name: "Email",
-    title: "What is your email address?",
-    type: "text"
-  }, {
-    name: "PetName",
-    title: "What is your pet's name?",
-    type: "text"
-  }]
-};
+export default function RegisterForm() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const fullName = firstName + ' ' + lastName;
+  const [email, setEmail] = useState('');
+  const [petName, setPetName] = useState('');
 
-const userBabyInfo = {
-  elements: [{
-    name: "UserName",
-    title: "What is your name? This will be your user id.",
-    type: "text"
-  }, {
-    name: "Email",
-    title: "What is your email address?",
-    type: "text"
-  }, {
-    name: "BabyName",
-    title: "What is your baby's name?",
-    type: "text"
-  }]
-};
-
-export const RegisterForm = () => {
-  const { animal_type} = useParams();
-  let survey;
-  switch (animal_type) {
-    case "human":
-      survey = new Model(userBabyInfo)
-      break
-    case "dog":
-      survey = new Model(userPetInfo)
-      break
-    default:
-      survey = new Model(userPetInfo)
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
   }
+
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
+  }
+
+  function handleEmailChange(e) {
+    setEmail(e.target.value);
+  }
+
+  function handlePetNameChange(e) {
+    setPetName(e.target.value);
+  }
+
   return (
-    <div className="RegisterForm" id="RegisterForm">
-      <header className="RegisterForm-header" id="RegisterForm-header">
-        <h1>Sign Up</h1>
-      </header>
-      <div class="questions" id="questions">
-        <Survey model={survey}/>;
-      </div>
-    </div>
+    <>
+      <h2>Sign up</h2>
+      <label>
+        Your Name:
+        <input
+          value={firstName}
+          onChange={handleFirstNameChange}
+        />
+      </label>
+      <label>
+        Last Name:{' '}
+        <input
+          value={lastName}
+          onChange={handleLastNameChange}
+        />
+      </label>
+      <label>
+        Email:{' '}
+        <input
+          value={email}
+          onChange={handleEmailChange}
+        />
+      </label>
+      <label>
+        Your Pet Name:
+        <input
+          value={petName}
+          onChange={handlePetNameChange}
+        />
+      </label>
+      <button>Confirm</button>
+      <p><b>{fullName}</b>'s information is looking good!</p>
+    </>
   );
 }
-
-export default RegisterForm;
