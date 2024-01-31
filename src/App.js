@@ -1,28 +1,21 @@
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "./pages/Welcome";
-import RegisterForm from "./pages/RegisterForm";
-import NoPage from "./pages/NoPage";
+import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from './Page/Home/Homescreen';
 
-export default function App() {
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          <Route index element={<Welcome />} />
-          <Route path="RegisterForm/:animal_type" element={<RegisterForm />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+      <Router>
+        <div>
+          <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="*" element={<div>404 Not Found</div>}></Route>
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
-
-
-// RegisterForm == snake case
-// RegisterForm == screaming snake case
-// registerForm == camel case
-// RegisterForm == pascal case
+export default App;

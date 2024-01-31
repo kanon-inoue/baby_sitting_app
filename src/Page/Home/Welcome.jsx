@@ -1,26 +1,18 @@
-import './App.css';
-import './RegisterForm.jsx'
-import React, { Component } from 'react';
-import {FaHeart} from 'react-icons/fa';
-import dog from "./dog.svg";
-import baby from "./baby.svg";
-import {Link} from "react-router-dom";
-
-const Welcome = () => {
+export default function Welcome() {
   return (
-    <div className="Welcome" id="Welcome">
-      <header className="Welcome-header" id="Welcome-header">
-        <h1 class= "welcome" id="welcome">Welcome <FaHeart style={{color: 'pink'}}/></h1> 
-      </header>
-      <div class="welcome_question" id="welcome_question">
-        <p class="owner_question" id="owner_question">What are you looking after with this application?</p>
-        <div class="button_section">
-          <Link to="/RegisterForm/human"><button class="baby_button"><img class="baby_img"src={baby}/>Human</button></Link>
-          <Link to="/RegisterForm/dog"><button class="dog_button"><img class="dog_img"src={dog}/>Dog</button></Link>
+    <section id="Welcome" className="welcome--section">
+      <div className="welcome--section--content--box">
+        <div className="welcome--section--content">
+          <p className="section--title">Welcome</p>
+          <h2>Would you like to use the app for...?</h2>
+          <div className="welcome--section--buttons">
+            <button className="btn">Baby</button>
+            <button className="btn">Dog</button>
+            <button className="btn">Cat</button>
+            <button className="btn">Fish</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-export default Welcome;
