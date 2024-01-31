@@ -1,3 +1,23 @@
 On Baby 
 - adding baby nnumber 
 - adding all baby names
+
+On Main 
+- creating a todo list 
+- add a task 
+- delete a task 
+- edit a task 
+- inside the task 
+    - task name (feed, diper poo, diper, pee, bath, else)
+    - data and time 
+    - who did the task
+    - discription
+
+Pages i want to add 
+- messaging 
+- setting 
+- posting
+  - comment 
+  - like 
+  - time 
+- finding a babysitter 

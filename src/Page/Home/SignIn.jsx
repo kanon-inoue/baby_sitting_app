@@ -1,13 +1,21 @@
+import { Routes, Route, useNavigate } from "react-router-dom";
+import Main from "./Main"
+
 export default function SignIn() {
+  const navigate = useNavigate();
+
+  const navigateMain = () => {
+    navigate('/main');
+  }
   return (
     <section id="SignIn" className="sign--section">
       <div>
-        <p className="subtitle">Sign In</p>
+        <h3>Sign In</h3>
         <p className="text-lg">
           Welcome back!
         </p>
       </div>
-      <form className="sign--form-container">
+      <form className="sign--form--container">
         <div className="container">
           <label htmlFor="emial-address" className="sign--label">
             <span className="text-md">Your Email Address</span>
@@ -29,9 +37,12 @@ export default function SignIn() {
           </label>
         </div>
         <div>
-          <button className="btn btn-primary sign-form-btn">
-            Submit
+          <button className="btn btn-primary sign-form-btn" onClick={navigateMain}>
+            Sign In
           </button>
+          <Routes>
+          <Route path="/main" element={<Main />} />
+        </Routes>
         </div>
       </form>
     </section>

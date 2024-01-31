@@ -3,6 +3,7 @@ import Baby from "./Baby";
 import Dog from "./Dog";
 import Cat from "./Cat";
 import Fish from "./Fish";
+import SignIn from "./SignIn";
 
 export default function Welcome() {
   const navigate = useNavigate();
@@ -19,9 +20,13 @@ export default function Welcome() {
   const navigateFish = () => {
     navigate('/fish');
   }
+  const navigateSignIn = () => {
+    navigate('/signin');
+  }
 
   return (
     <section id="Welcome" className="welcome--section">
+      
       <div className="welcome--section--content--box">
         <div className="welcome--section--content">
           <h2>Welcome</h2>
@@ -40,8 +45,17 @@ export default function Welcome() {
           </div>
         </div>
       </div>
+
       <div className="welcome--section--img">
         <img src="./img/parentpic.png" alt="Welcome" />
+      </div>
+
+      <div className="welcome--section--content">
+        <p className="text-sm">Do you already have your account?</p>
+        <p className="text-md" onClick={navigateSignIn}>Sign In</p>
+        <Routes>
+          <Route Route path="/signin" element={<SignIn />} />
+        </Routes>
       </div>
     </section>
   );
