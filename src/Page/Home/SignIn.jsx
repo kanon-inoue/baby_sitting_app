@@ -1,4 +1,4 @@
-/* export default function SignIn() {
+export default function SignIn() {
   return (
     <section id="SignIn" className="sign--section">
       <div>
@@ -36,4 +36,4 @@
       </form>
     </section>
   );
-} */
+}
