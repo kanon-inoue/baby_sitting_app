@@ -1,5 +1,5 @@
-import './welcome.css';
-import './RegisterForm.js'
+import './App.css';
+import './RegisterForm.jsx'
 import React, { Component } from 'react';
 import {FaHeart} from 'react-icons/fa';
 import dog from "./dog.svg";
