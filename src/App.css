@@ -1,7 +1,7 @@
 /* Global CSS */
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: "Roboto", sans-serif;
   -moz-osx-font-smoothing: "Roboto", sans-serif;
   font-style: normal;
@@ -135,7 +135,7 @@ h3 {
 }
 /* Section Titles Ends */
 
-
+/* Welcome Starts */
 .welcome--section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -168,3 +168,41 @@ h3 {
 .welcome--btn {
   margin-right: 20px;
 }
+/* Welcome Ends */
+
+/* SignUp Starts */
+.sign--section {
+  display: flex;
+  padding: 150px 85px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 64px;
+}
+.sign--form--container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  width: 40%;
+  row-gap: 32px;
+}
+.sign--label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10.6px;
+  flex: 1 0 0;
+  width: 100%
+}
+.sign--input {
+  display: flex;
+  font-family: "Roboto";
+  padding: 16px; 
+  align-items: center;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1.333px solid var(--primary);
+  background: var(--white);
+}
+/* SignUp Ends */
