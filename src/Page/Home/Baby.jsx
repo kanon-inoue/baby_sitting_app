@@ -1,11 +1,11 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import SignUp from "./SignUp"
+import SignIn from "./SignIn";
 
 export default function Baby() {
   const navigate = useNavigate();
 
-  const navigateSignUp = () => {
-    navigate('/signup');
+  const navigateSignIn = () => {
+    navigate('/signin');
   }
 
   return (
@@ -76,9 +76,9 @@ export default function Baby() {
         </div>  
       </form>
       <div>
-        <button className="btn btn-primary welcome--btn" onClick={navigateSignUp}>Sign Up</button>
+        <button className="btn btn-primary welcome--btn" onClick={navigateSignIn}>Sign Up</button>
         <Routes>
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </div>
     </section>

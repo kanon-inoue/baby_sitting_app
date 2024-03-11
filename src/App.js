@@ -6,7 +6,6 @@ import Baby from './Page/Home/Baby';
 import Dog from './Page/Home/Dog';
 import Cat from './Page/Home/Cat';
 import Fish from './Page/Home/Fish';
-import SignUp from './Page/Home/SignUp';
 import SignIn from './Page/Home/SignIn';
 import Main from './Page/Home/Main';
 
@@ -21,7 +20,6 @@ function App() {
           <Route path="/dog" element={<Dog />}></Route>
           <Route path="/cat" element={<Cat />}></Route>
           <Route path="/fish" element={<Fish />}></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/signin" element={<SignIn />}></Route>
           <Route path="/main" element={<Main />}></Route>
           <Route path="*" element={<div>404 Not Found</div>}></Route>
